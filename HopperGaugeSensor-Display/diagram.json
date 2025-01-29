@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "author": "Mario Carmo Parente",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -108, "left": -212, "attrs": {} },
+      {
+        "type": "wokwi-ili9341",
+        "id": "lcd1",
+        "top": -165.6,
+        "left": 4.77,
+        "rotate": 90,
+        "attrs": {}
+      }
+    ],
+    "connections": [
+      [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+      [ "lcd1:MISO", "esp:D19", "#8f4814", [ "h-41.87", "v-59.19" ] ],
+      [ "lcd1:SCK", "esp:D18", "orange", [ "h-32.73", "v-27.19" ] ],
+      [ "lcd1:MOSI", "esp:D23", "blue", [ "h-28.16", "v-71.51" ] ],
+      [ "lcd1:CS", "esp:D5", "green", [ "h-21.43", "v19.9" ] ],
+      [ "lcd1:VCC", "esp:3V3", "red", [ "h-17.2", "v120.88" ] ],
+      [ "lcd1:GND", "esp:GND.1", "black", [ "h-53.75", "v84.78" ] ],
+      [ "lcd1:LED", "esp:3V3", "red", [ "h-10.18", "v46.83" ] ],
+      [ "lcd1:D/C", "esp:D4", "green", [ "h-14.36", "v26.51" ] ]
+    ],
+    "dependencies": {}
+  }

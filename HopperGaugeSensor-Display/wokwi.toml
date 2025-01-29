@@ -1,0 +1,33 @@
+[wokwi]
+version = "2.6.0"
+firmware = "firmware.bin"
+elf = "firmware.elf" 
+
+[env]
+board = "esp32-wroom-32"
+
+[project]
+name = "DisplayHopperGaugeSensor"
+description = "A project to display hopper gauge sensor readings using an ESP32 and ILI9341 display."
+authors = ["Ismael Oliveira"]
+
+[dependencies]
+wokwi = "*"
+
+[hardware]
+parts = [
+    { type = "wokwi-esp32-devkit-v1", id = "esp" },
+    { type = "wokwi-ili9341", id = "lcd1" }
+]
+
+[connections]
+esp_TX0 = "$serialMonitor_RX"
+esp_RX0 = "$serialMonitor_TX"
+lcd1_MISO = "esp_D19"
+lcd1_SCK = "esp_D18"
+lcd1_MOSI = "esp_D23"
+lcd1_CS = "esp_D5"
+lcd1_VCC = "esp_3V3"
+lcd1_GND = "esp_GND.1"
+lcd1_LED = "esp_3V3"
+lcd1_DC = "esp_D4"
