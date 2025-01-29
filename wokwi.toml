@@ -1,0 +1,84 @@
+
+[wokwi]
+version = "2.6.0"
+firmware = "firmware.bin"
+elf = "firmware.elf" 
+
+[env]
+board = "esp32-wroom-32"
+
+[[pin]]
+number = 2
+mode = "output"
+
+[[pin]]
+number = 4
+mode = "output"
+
+[[pin]]
+number = 16
+mode = "output"
+
+[[pin]]
+number = 17
+mode = "output"
+
+[[pin]]
+number = 18
+mode = "output"
+
+[[pin]]
+number = 19
+mode = "output"
+
+[[pin]]
+number = 21
+mode = "output"
+
+[[pin]]
+number = 22
+mode = "output"
+
+[[pin]]
+number = 23
+mode = "input"
+
+[[pin]]
+number = 32
+mode = "output"
+
+[[pin]]
+number = 33
+mode = "output"
+
+[[pin]]
+number = 25
+mode = "output"
+
+[[pin]]
+number = 26
+mode = "output"
+
+[[pin]]
+number = 27
+mode = "output"
+
+[[pin]]
+number = 14
+mode = "output"
+
+[[pin]]
+number = 12
+mode = "output"
+
+[[pin]]
+number = 13
+mode = "output"
+
+[[pin]]
+number = 34
+mode = "input"
+
+[[pin]]
+number = 35
+mode = "input"
