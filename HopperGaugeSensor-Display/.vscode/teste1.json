@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "author": "Your Name",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-esp32-devkit-v1", "id": "esp32", "top": -50, "left": 100, "attrs": {} },
+      { "type": "wokwi-potentiometer", "id": "pot1", "top": 100, "left": 50, "attrs": { "value": 2048 } },
+      { "type": "wokwi-potentiometer", "id": "pot2", "top": 200, "left": 50, "attrs": { "value": 2048 } },
+      { "type": "wokwi-ili9341", "id": "display", "top": 50, "left": 200, "attrs": { "rotation": "1" } }
+    ],
+    "connections": [
+      [ "esp32:34", "pot1:WIPER" ],
+      [ "esp32:35", "pot2:WIPER" ],
+      [ "esp32:5V", "pot1:VCC" ],
+      [ "esp32:GND", "pot1:GND" ],
+      [ "esp32:5V", "pot2:VCC" ],
+      [ "esp32:GND", "pot2:GND" ],
+      [ "esp32:5", "display:CS" ],
+      [ "esp32:4", "display:DC" ],
+      [ "esp32:23", "display:MOSI" ],
+      [ "esp32:18", "display:SCK" ],
+      [ "esp32:19", "display:MISO" ],
+      [ "esp32:3V3", "display:VCC" ],
+      [ "esp32:GND", "display:GND" ]
+    ]
+  }
